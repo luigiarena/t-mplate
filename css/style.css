@@ -24,15 +24,46 @@
     background: #fff;
 }
 
+/* --- header --- */
 .header {
-
+    background-image: url('../images/home-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}   
+.overlay{
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(244, 244, 244, 0.79);
 }
-
-.home div h1 {
-    font-family: "Anton", serif;
-    font-size: 130px;
+.header .description {
+    position: absolute;
+    display: flex;
+    
+    top: 30%;
+    margin: auto;
+    padding: 2em;
+    text-align: center;
+    height: 100%;
+    color: white;
 }
-
+.header .description h1 {
+    font-size: 130pt;
+}
+.header .description p {
+    font-size: 20pt;
+    line-height: 1.5;
+}
+.header .description .btn,
+.header .description .btn:hover {
+    background: none;
+    border: none;
+    color: #fff;
+}
+   
 /* -- TEST -- */
 section {
     width: 100%;
@@ -40,28 +71,44 @@ section {
 }
 
 /* --- navbar --- */
-
-.navbar-nav a {
-
+.navbar {
+    margin: auto;
+    height: 100px;
+}
+.navbar-nav a, .navbar button {
     font-family: "DM Sans", serif;
     font-size: 14px;
     font-weight: 400;
+    color: #fff;
 }
 
 .navbar-light .navbar-brand {
     font-size: 25px;
+}
+.navbar-brand img {
+    height: 50px;
+}
+.navbar { background: transparent;}
+
+.nav-link{ 
+    padding: 15px 35px;
+    margin-right: 1em !important;
+}
+.nav-link:hover { color: #f97300; }
+
+.btn-contatti {
     font-weight: 700;
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--primary-color);
+    border-radius: 40px;
+}
+.btn-contatti:hover {
+    color: #fff;
+    background-color: var(--secondary-color);
 }
 
-.navbar{ background: transparent;}
-
-.nav-link , .navbar-brand{ color: #f4f4f4; cursor: pointer;}
-
-.nav-link{ margin-right: 1em !important;}
-
-.nav-link:hover{ color: #f97300; }
-
-.navbar-collapse{ justify-content: flex-end;}
+.navbar-collapse { justify-content: flex-end;}
 
 .navbar-toggler { background:#fff !important;}
 
