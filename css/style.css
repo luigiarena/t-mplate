@@ -1,8 +1,8 @@
 :root {
     --primary-color: #1F08B0;
-    --secondary-color: #100458;
+    --secondary-color: #E34C1D;
     --bs-body-bg: #fff;
-    --body-font-family: 'DM Sans', sans-serif;     
+    --body-font-family: 'DM Sans', serif;     
 }
 
 /* --- font --- */
@@ -40,21 +40,36 @@
     background: rgba(244, 244, 244, 0.79);
 }
 .header .description {
+    /*
     position: absolute;
     display: flex;
     
     top: 30%;
     margin: auto;
     padding: 2em;
+    
     text-align: center;
-    height: 100%;
+    */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+    width: 100;
+    height: 100vh;
     color: white;
+    
+}
+.header .banner-text p,
+.header .banner-text h1 {
+    text-shadow: 0 0 20px rgb(97, 97, 97),
+    0 0 10em rgb(0, 0, 0);
 }
 .header .description h1 {
-    font-size: 130pt;
+    font-size: 130px;
 }
 .header .description p {
-    font-size: 20pt;
+    font-size: 20px;
     line-height: 1.5;
 }
 .header .description .btn,
@@ -66,8 +81,10 @@
    
 /* -- TEST -- */
 section {
+    /*
     width: 100%;
     height: 500px;
+    */
 }
 
 /* --- navbar --- */
@@ -78,7 +95,7 @@ section {
 .navbar-nav a, .navbar button {
     font-family: "DM Sans", serif;
     font-size: 14px;
-    font-weight: 400;
+    letter-spacing: 2px;
     color: #fff;
 }
 
@@ -87,6 +104,7 @@ section {
 }
 .navbar-brand img {
     height: 50px;
+    filter: drop-shadow(0 0 40px rgb(0, 0, 0));
 }
 .navbar { background: transparent;}
 
@@ -94,7 +112,7 @@ section {
     padding: 15px 35px;
     margin-right: 1em !important;
 }
-.nav-link:hover { color: #f97300; }
+.nav-link:hover { color: var(--secondary-color) }
 
 .btn-contatti {
     font-weight: 700;
@@ -114,13 +132,40 @@ section {
 
 
 /* --- responsive css --- */
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    
+@media (max-width: 990px) {
+    .btn-contatti {
+        display: none !important;
+    }
 }
 
-@media only screen and (max-width: 76px) {
-    .navbar-nav{
+@media (min-width: 991px) {
+    .nav-contatti {
+        display: none !important;
+    }
+}
+
+@media (min-width: 576px) {
+    .navbar-nav {
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .navbar-nav {
+        text-align: right;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-nav {
         text-align: center;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .container-fluid {
+        max-width: 1500px;
     }
 }
