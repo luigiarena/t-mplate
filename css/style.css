@@ -1,3 +1,4 @@
+/*** BOOTSTRAP ROOT ***/
 :root {
     --primary-color: #1F08B0;
     --secondary-color: #E34C1D;
@@ -5,7 +6,7 @@
     --body-font-family: 'DM Sans', serif;     
 }
 
-/* --- font --- */
+/*** TYPOGRAPHY ***/
 .anton {
     font-family: "Anton", serif;
     font-weight: 400;
@@ -19,18 +20,169 @@
 
 }
 
-/* --- body --- */
+h1 {
+    font-size: 8.125em;
+}
+h2 {
+    font-size: 5em;
+}
+h3 {
+    font-size: 3em;
+}
+h4 {
+    font-size: 1.5em;
+}
+h5 {
+    font-size: 1.25em;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*** BODY ***/
 .body {
     background: #fff;
 }
 
-/* --- header --- */
+/*** NAVBAR ***/
+.navbar {
+    /*
+    margin: auto;
+    height: 100px;
+    */
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    position: fixed;
+    padding: 30px 0;
+    width: 100vw;
+    height: 100px;
+    z-index: 10;
+    transition: all .3s ease-in-out;
+}
+.navbar-nav a, .navbar button {
+    font-family: "DM Sans", serif;
+    font-size: 0.875em;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.navbar-brand {
+    /* font-size: 25px; */
+    height: 50px;
+    cursor: pointer;
+}
+.navbar-brand .logo-neg {
+    height: 100%;
+    filter: drop-shadow(0 1.5em 40px rgb(0, 0, 0));
+    transition: .3s ease-in-out;
+}
+.navbar-brand .logo-neg:hover {
+    filter: drop-shadow(0 1em 20px rgb(255, 255, 255));
+}
+.navbar-brand .logo-pos {
+    height: 100%;
+    transition: .3s ease-in-out;
+}
+.navbar-brand .logo-pos:hover {
+    filter: drop-shadow(0 0 15px rgb(94, 94, 94));
+}
+.navbar-nav .nav-link { 
+    padding: 15px 35px;
+    margin-right: 1em !important;
+    transition: .3s ease-in-out;
+}
+.navbar-nav .nav-link:hover { 
+    color: var(--secondary-color) 
+}
+.navbar-btn-contatti {
+    font-weight: 700;
+    display: inline-block;
+    padding: 15px 35px;
+    background: linear-gradient(-110deg, #e9ca31 0%, #e34c1d 26%, #741d7c 53%, #1f08b0 83%, #439AC5 100%);
+    background-size: 130% 120%;
+    background-position: 25% 5%;
+    background: var(--primary-color);
+    border-radius: 40px;
+    transition: .3s ease-in-out;
+}
+.navbar-btn-contatti:hover {
+    color: #fff;
+    background-color: var(--secondary-color);
+}
+.navbar-btn-contatti:active {
+    background-color: red;
+}
+.btn-contatti {
+    font-family: "DM Sans", serif;
+    font-size: 0.875em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    padding: 15px 35px;
+    border: 1px solid #ffffff33;
+    background-color: var(--primary-color);
+    background: rgb(67,154,197);
+    background: linear-gradient(-110deg, #e9ca31 0%, #e34c1d 26%, #741d7c 53%, #1f08b0 83%, #439AC5 100%);
+    background-size: 130% 120%;
+    background-position: 25% 5%;
+    border-radius: 50px;
+    transition: all .3s ease-in-out;
+}
+.btn-contatti:hover {
+    color: #fff;
+    border: 1px solid #741d7c;
+    box-shadow: 0 0 20px #1F08B0,
+                0 0 30px #741d7c,
+                0 0 40px #e34c1d;
+    background-size: 300% 200%;
+    background-position: 90% 90%;*/
+
+}
+.btn-contatti:active {
+    outline-color: orange;
+
+}
+.btn-contatti:focus {
+    outline-color: orange;
+}
+
+.navbar-collapse { justify-content: flex-end;}
+
+.navbar-toggler { background:#fff !important;}
+
+/* Navbar Sticky Layout */
+.navbar-sticky {
+    background: #fff;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-radius: 20px;
+    box-shadow: 0 0.1em 50px rgb(68, 68, 68);
+    background: #ffffffcc;
+    backdrop-filter: blur(10px) saturate(1.2) brightness(1.2);
+}
+.navbar-sticky .navlink {
+    transition: all .3s ease-in-out;
+}
+
+.navbar-sticky .nav-link:hover {
+    border-radius: 50px;
+    color: #E34C1D !important;
+    text-shadow: 0 0 15px #fff,
+                 0 0 25px rgb(94, 94, 94);
+}
+
+/*** HEADER ***/
 .header {
     background-image: url('../images/home-bg.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
 }   
+/*
 .overlay{
     position: absolute;
     min-height: 100%;
@@ -39,22 +191,23 @@
     top: 0;
     background: rgba(244, 244, 244, 0.79);
 }
+*/
 .header .description {
     /*
     position: absolute;
     display: flex;
     
     top: 30%;
+    */
     margin: auto;
-    padding: 2em;
+    padding: 3em;
     
     text-align: center;
-    */
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    text-align: center;
     width: 100;
     height: 100vh;
     color: white;
@@ -62,14 +215,15 @@
 }
 .header .banner-text p,
 .header .banner-text h1 {
-    text-shadow: 0 0 20px rgb(97, 97, 97),
-    0 0 10em rgb(0, 0, 0);
+    text-shadow: 0 3rem 150px rgb(0, 0, 0);
 }
 .header .description h1 {
-    font-size: 130px;
+    /* font-size: 130px; */
+    font-size: 8.125em;
 }
 .header .description p {
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: 1.25em;
     line-height: 1.5;
 }
 .header .description .btn,
@@ -78,62 +232,86 @@
     border: none;
     color: #fff;
 }
+
+.header .description .btn img {
+    width: 25px;
+}
    
-/* -- TEST -- */
-section {
+/*** SECTION ***/
+section h1, section h2 {
+    color: var(--primary-color);
+    margin: 2em;
+}
+section p, section h6, section h5, section, h4, section h3 {
     /*
     width: 100%;
     height: 500px;
     */
+    color: #000;
+    text-align: justify;
 }
-
-/* --- navbar --- */
-.navbar {
-    margin: auto;
-    height: 100px;
-}
-.navbar-nav a, .navbar button {
-    font-family: "DM Sans", serif;
-    font-size: 14px;
-    letter-spacing: 2px;
+section .btn {
     color: #fff;
 }
 
-.navbar-light .navbar-brand {
-    font-size: 25px;
+#chi {
+    margin: 4em 0;
+    padding: 0;
+    position: relative;
 }
-.navbar-brand img {
-    height: 50px;
-    filter: drop-shadow(0 0 40px rgb(0, 0, 0));
-}
-.navbar { background: transparent;}
 
-.nav-link{ 
-    padding: 15px 35px;
-    margin-right: 1em !important;
+#team {
+    margin: 4em 0;
+    padding: 0;
+    position: relative;
 }
-.nav-link:hover { color: var(--secondary-color) }
+#team .item {
+    position: relative;
+}
+#team .des {
+    background: val(--primary-color);
+    text-align: center;
+    border-bottom-left-radius: 93%;
+    transition: .3s ease-in-out;
+}
 
-.btn-contatti {
-    font-weight: 700;
-    display: inline-block;
-    padding: 15px 35px;
-    background-color: var(--primary-color);
-    border-radius: 40px;
+#contatti {
+    margin: 6em 0;
+    position: relative;
 }
-.btn-contatti:hover {
+#contatti .right {
+    max-width: 600px;
+}
+#contatti .right .form-control {
+    background-color: none;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #BDCCD4;
+    transition: .3s ease-in-out;
+}
+#contatti .right .btn-secondary {
     color: #fff;
-    background-color: var(--secondary-color);
+    border-radius: 50px;
+}
+#contatti .right .form-control:focus {
+    background-color: rgb(242, 242, 255); 
 }
 
-.navbar-collapse { justify-content: flex-end;}
+/*
+#team .item:hover .des {
+    height: 100%;
+    background: #f97307d;
+    position: absolute;
+    width: 89%;
+    padding: 5em;
+    top: 0;
+    border-bottom-left-radius: 0;
+}
+*/
 
-.navbar-toggler { background:#fff !important;}
-
-
-/* --- responsive css --- */
+/*** MEDIA QUERY ***/
 @media (max-width: 990px) {
-    .btn-contatti {
+    .navbar-btn-contatti {
         display: none !important;
     }
 }

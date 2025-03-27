@@ -1,0 +1,3 @@
+- errore durante il cambio di sfondo sul bottone contatti nella navbar (l'animazione fa vedere un lato bianco a sinistra)
+
+- nella navbar, il logo durante il cambio di colore trema, probabilmente un errore dovuto al posizionamento iniziale di logo-poz a destra rispetto a logo-neg
