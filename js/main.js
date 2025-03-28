@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    // Add smooth scrolling to all links
+    // Aggiunge lo smooth scrollink a tutti i link che contengono un hash
     $("a").on('click', function(event) {
   
       // Make sure this.hash has a value before overriding default behavior
@@ -22,7 +22,7 @@ $(document).ready(function(){
       } // End if
     });
 
-    //On Scroll Functionality
+    // Trasforma la navbar in sticky al superamento di 100px
 	$(window).scroll( () => {
 		var windowTop = $(window).scrollTop();
 		windowTop > 100 ? $('nav').addClass('navbar-sticky') : $('nav').removeClass('navbar-sticky');

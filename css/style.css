@@ -47,10 +47,6 @@ html {
 
 /*** NAVBAR ***/
 .navbar {
-    /*
-    margin: auto;
-    height: 100px;
-    */
     background: transparent;
 
     display: flex;
@@ -62,6 +58,14 @@ html {
     width: 100vw;
     height: 100px;
     z-index: 10;
+    transition: all .3s ease-in-out;
+}
+.navbar .nav-container {
+    background: transparent;
+    margin-top: 0px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0;
     transition: all .3s ease-in-out;
 }
 .navbar-nav a, .navbar button {
@@ -161,14 +165,15 @@ html {
 .navbar-toggler { background:#fff !important;}
 
 /* Navbar Sticky Layout */
-.navbar-sticky {
+.navbar-sticky .nav-container {
     background: #fff;
-    margin-top: 20px;
-    padding: 10px 0;
+    margin-top: 50px;
+    padding: 10px 20px;
     border-radius: 20px;
     box-shadow: 0 0.1em 50px rgb(68, 68, 68);
     background: #ffffffcc;
     backdrop-filter: blur(10px) saturate(1.2) brightness(1.2);
+    transition: all .3s ease-in-out;
 }
 .navbar-sticky .navlink {
     transition: all .3s ease-in-out;
@@ -188,16 +193,18 @@ html {
     background-size: cover;
     background-position: center;
 }   
-/*
+
 .overlay{
     position: absolute;
     min-height: 100%;
     min-width: 100%;
     left: 0;
     top: 0;
-    background: rgba(244, 244, 244, 0.79);
+    z-index: -1;
+    overflow: visible;
+    /*background: rgba(244, 244, 244, 0.79);*/
 }
-*/
+
 .header .description {
     /*
     position: absolute;
@@ -371,15 +378,10 @@ section .btn {
 }
 
 @media (min-width: 576px) {
-    .navbar-nav {
-        text-align: left;
-    }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .navbar-nav {
-        text-align: right;
-    }
 
 }
 
