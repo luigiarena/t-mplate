@@ -21,126 +21,121 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg ">
-        <div class="nav-container container-fluid justify-content-md-center">
-            <a id="logo" class="navbar-brand" href="#home">
+    <nav class="navbar navbar-expand-lg fixed-top justify-content-md-center mx-auto">
+        <div class="nav-container container-fluid dm-sans f-size-7 f-space-100">
+            <a id="logo" class="navbar-brand" href="#hero">
                 <img class="logo-neg" src="images/logo/logo-oriz-neg.svg" alt="T-mplate Logo">
                 <img class="logo-pos d-none" src="images/logo/logo-oriz-pos.svg" alt="T-mplate Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center align-middle" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item p-3"><a class="nav-link" data-value="chi" href="#chi">CHI SIAMO</a></li>
-                    <li class="nav-item p-3"><a class="nav-link" data-value="cosa" href="#cosa">COSA FACCIAMO</a></li>
-                    <li class="nav-item p-3"><a class="nav-link" data-value="soluzioni" href="#soluzioni">SOLUZIONI SU MISURA</a></li>
-                    <li class="nav-item p-3"><a class="nav-link" data-value="vantaggi" href="#vantaggi">VANTAGGI</a></li>
-                    <li class="nav-item p-3"><a class="nav-link" data-value="team" href="#team">MANAGEMENT TEAM</a></li>
-                    <li class="nav-item p-3"><a class="nav-link nav-contatti" data-value="contatti" href="#contatti">CONTATTACI</a></li>
+                    <li class="nav-item"><a class="nav-link" data-value="chi" href="#chi">CHI SIAMO</a></li>
+                    <li class="nav-item"><a class="nav-link" data-value="cosa" href="#cosa">COSA FACCIAMO</a></li>
+                    <li class="nav-item"><a class="nav-link" data-value="soluzioni" href="#soluzioni">SOLUZIONI SU MISURA</a></li>
+                    <li class="nav-item"><a class="nav-link" data-value="vantaggi" href="#vantaggi">VANTAGGI</a></li>
+                    <li class="nav-item"><a class="nav-link" data-value="team" href="#team">MANAGEMENT TEAM</a></li>
+                    <li class="nav-item"><a class="nav-link nav-contatti" data-value="contatti" href="#contatti">CONTATTACI</a></li>
                 </ul>
             </div>
-            <a class="btn btn-rounded navbar-btn-contatti" role="button" data-value="contatti" href="#contatti">CONTATTACI</a>
-            <!--button class="btn btn-lg navbar-btn-contatti" data-value="contatti">
-                CONTATTACI
-            </button-->
+            <a class="btn rounded-pill navbar-btn-contatti font-weight-bold text-white" role="button" data-value="contatti" href="#contatti">CONTATTACI</a>
         </div>
     </nav>
 
     <!-- Section Home -->
-    <header id="home" class="header">
+    <section id="hero">
         <!--div class="overlay"></div-->
-        <div class="container-fluid hv-100 justify-content-md-center">
-            <div class="description d-flex justify-content-between align-items-center">
-                <div class="w-100"></div>
-                <div class="banner-text">
-                    <h1 class="anton">POWERING YOUR JOURNEY</h1>
-                    <p class="dm-sans">Stiamo sviluppando un network integrato a favore della mobilità sostenibile.</p>   
-                </div>
-                <div class="justify-content-center">
-                    <a class="btn btn-lg btn-more" data-value="chi" href="#chi">
-                        <div class="more-bg"></div>
-                        <p class="more-p dm-sans">SCOPRI DI PIÙ</p>
-                        <img src="images/down-arrow.svg" alt="T-mplate Logo">
-                    </a>
-                </div>
+        <div class="container d-flex flex-column justify-content-between align-items-center">
+            <div class="w-100"></div>
+            <div class="banner-text text-white text-center">
+                <p class="anton f-size-1">POWERING YOUR JOURNEY</p>
+                <p class="dm-sans f-size-5">Stiamo sviluppando un network integrato a favore della mobilità sostenibile.</p>   
+            </div>
+            <div class="justify-content-center">
+                <a class="btn btn-lg btn-more text-white shadow-none" data-value="chi" href="#chi">
+                    <div class="more-bg"></div>
+                    <p class="more-p dm-sans f-size-7">SCOPRI DI PIÙ</p>
+                    <img src="images/down-arrow.svg" alt="T-mplate Logo">
+                </a>
             </div>             
         </div>
-    </header>
+    </section>
 
     <!-- Section Chi Siamo -->
-    <section id="chi" class="text-white text-center"
-    style="position: relative;">
+    <section id="chi" class="text-black text-center" style="position: relative;">
 
-    <img src="images/bg-chisiamo-home-SX.png" class="position-absolute" style="top: 15px; bottom: 15px; left: 0;">
-    <img src="images/bg-chisiamo-home-DX.png" class="position-absolute" style="top: 15px; bottom: 15px; right: 0;"> 
+        <img src="images/bg-chisiamo-home-SX.png" class="sec-img sec-left">
+        <img src="images/bg-chisiamo-home-DX.png" class="sec-img sec-right"> 
 
-
-
-        <div class="container container-chi hv-100 justify-content-md-center">
-            <!--<div class="row overlay justify-content-between">
-                <img src="images/bg-chisiamo-home-SX.png" class="col-lg-6 col-md-4 col-sm-0">
-                <img src="images/bg-chisiamo-home-DX.png" class="col-lg-6 col-md-4 col-sm-0">    
-            </div>-->
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8 col-sm-12">
-                    <h2 class="anton">CHI SIAMO</h3>
-                    <h5>
-                        Siamo l’ultima start up promossa da <en>Lorem Ipsum</en>.
-                    </h5>
-                    <h5>
-                        Vantiamo un’esperienza di oltre 15 anni nello sviluppo,
+        <div class="container container-chi justify-content-md-center">
+            <div class="row sec-title text-center justify-content-center">
+                <h1 class="anton f-size-2">CHI SIAMO</h1>
+            </div>
+            <div class="row text-center justify-content-center">
+                <div class="col-sm-12 col-md-10 col-lg-6">
+                    <p class="dm-sans f-size-4">
+                        Siamo l’ultima start up promossa da <strong>Lorem Ipsum</strong>.
+                    </p>
+                    <br>
+                    <p class="dm-sans f-size-4">
+                        Vantiamo un’esperienza di <strong>oltre 15 anni</strong> nello sviluppo,
                         costruzione e gestione di impianti di produzione
-                        di energia elettrica da fonti rinnovabili.
-                    </h5>
-                    <h6>
-                        L’ingresso nel mercato della ricarica dei veicoli
+                        di energia <strong>elettrica da fonti rinnovabili</strong>.
+                    </p>
+                </div>
+            </div>
+            <div class="row text-justify justify-content-center">
+                <div class="col-sm-12 col-md-8 col-lg-4">
+                    <p class="dm-sans f-size-5">
+                        <strong>L’ingresso nel mercato della ricarica dei veicoli
                         elettrici è un’evoluzione naturale della strategia
-                        di Lorem Ipsum, da sempre votata al rispetto per
+                        di Lorem Ipsum</strong>, da sempre votata al rispetto per
                         l’ambiente e la sostenibilità.
-                    </h6>
-                    <p>
+                    </p>
+                    <p class="dm-sans .f-size-6">
                         Con questa nuova iniziativa, Lorem Ipsum punta a sostenere la
                         mobilità del futuro offrendo facilità, prestazioni ed efﬁcienza di
                         ricarica per favorire la libertà di movimento degli utenti.
                     </p>
-                    <p>
-                        T-mplate mira ad offrire ai clienti il servizio più efﬁciente,
+                    <p class="dm-sans .f-size-6">
+                        T-mplate mira ad offrire ai clienti il <strong>servizio più efﬁciente</strong>,
                         scegliendo la soluzione migliore in relazione alla localizzazione
                         del punto di ricarica ed alle caratteristiche del mercato locale,
-                        fornendo energia elettrica prodotta esclusivamente da fonti
-                        rinnovabili.
+                        fornendo energia <strong>elettrica prodotta esclusivamente da fonti
+                        rinnovabili.</strong>
                     </p>
-                    <div class="space"></div>
-                    <a class="btn-contatti" data-value="contatti" href="#contatti">CONTATTACI</a>
                 </div>
+            </div>
+            <div class="row justify-content-center">
+                <a class="btn btn-contatti rounded-pill font-weight-bold text-white" data-value="contatti" href="#contatti">CONTATTACI</a>
             </div>
         </div>
     </section>
 
     <!-- Section Cosa Facciamo -->
-    <section id="cosa" class="bg-light text-center">
+    <!--section id="cosa" class="bg-light text-center">
         <div class="container">
             <h2 class="anton">COSA FACCIAMO</h1>
-            <p>This is the second section.</p>
         </div>
-    </section>
+    </section-->
 
     <!-- Section Soluzioni -->
-    <section id="soluzioni" class="bg-secondary text-white text-center">
+    <!--section id="soluzioni" class="bg-secondary text-white text-center">
         <div class="container">
             <h2 class="anton">SOLUZIONI SU MISURA</h1>
             <p>This is the third section.</p>
         </div>
-    </section>
+    </section-->
 
     <!-- Section Vantaggi -->
-    <section id="vantaggi" class="bg-light text-center">
+    <!--section id="vantaggi" class="bg-light text-center">
         <div class="container">
             <h2 class="anton">VANTAGGI</h1>
             <p>This is the fourth section.</p>
         </div>
-    </section>
+    </section-->
 
     <!-- Section Team -->
     <section id="team" class="text-center">
