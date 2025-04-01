@@ -11,6 +11,7 @@
     font-family: "Anton", serif;
     font-weight: 400;
     font-style: normal;
+    line-height: 1.1em;
 }
   
 .dm-sans {
@@ -18,7 +19,9 @@
     font-family: "DM Sans", serif;
     font-optical-sizing: auto;
     font-style: normal;
-
+}
+p {
+    margin-bottom: 0;
 }
 
 .f-size-1 {
@@ -31,7 +34,7 @@
 }
 .f-size-3 {
     /* riferimento 40px */
-    font-size: 3em;
+    font-size: 2.5em;
 }
 .f-size-4 {
     /* riferimento 24px */
@@ -256,21 +259,11 @@ body {
 }
 
 /*** SECTION ***/
-section h1, section h2 {
-    color: var(--primary-color);
-    /*
-    margin: 2em;
-    */
-}
-section p {
-    /*
-    color: #000;
-    */
+section {
+    position: relative;
 }
 section .sec-img {
     position: absolute;
-    top: 15px;
-    bottom: 15px;
     z-index: -1;
     transition: all .3s ease-in-out;
 }
@@ -280,16 +273,110 @@ section .sec-left {
 section .sec-right {
     right: 0;
 }
-section .row {
+section .sec-title {
+    color: var(--primary-color);
     padding: 60px 0;
+}
+section .sec-text {
+    /*margin: 60px auto;*/
+    padding: 60px 0;
+}
+section .sec-btn {
+    /*margin: 40px auto;*/
+    padding: 40px 0;
+}
+section .sec-textblock {
+    margin: 45px 0;
 }
 
 #chi {
-
+    padding-top: 290px; 
+    padding-bottom: 110px;
+}
+#chi .sec-img {
+    top: 15px;
+    bottom: 15px;
 }
 
-#team {
+#cosa {
+    padding-top: 160px;
+    padding-bottom: 90px;
+}
+#cosa .cosa-bg {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 250px;
+    z-index: -2;
+    background: #ffffff;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%,
+                                     rgba(255,255,255,1) 90%,
+                                     rgba(229,235,238,1) 96%,
+                                   rgba(189,204,212,1) 100%);
+}
+#cosa .sec-img {
+    top: 610px;
+    bottom: 15px;
+}
+#cosa .sec-body {
+    padding: 45px 0;
+}
 
+#soluzioni {
+    padding-top: 65px;
+    padding-bottom: 80px;
+}
+#soluzioni .sec-body {
+    padding: 90px 0;
+}
+
+#vantaggi {
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+#vantaggi .sec-body {
+    padding: 30px 0;
+}
+#vantaggi .sec-body .sec-mediablock {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+#vantaggi .sec-body .media {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#vantaggi .sec-body .media img {
+    width: 50px;
+    height: 50px;
+    margin: 0 25px;
+}
+#vantaggi .sec-body {
+    position: relative;
+}
+
+#vantaggi .sec-mediablock-bg {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background-color: #F2F5F6;
+    z-index: -1;
+}
+/*
+#vantaggi .sec-mediablock-bg-left {
+    left: -25%;
+    border-radius: 0 100px 100px 0;
+}
+#vantaggi .sec-mediablock-bg-right {
+    right: -25%;
+    border-radius: 100px 0 0 100px;
+}
+*/
+#team {
+    padding-top: 100px;
 }
 #team .item {
 
