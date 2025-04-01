@@ -181,26 +181,65 @@ body {
 /*** hero ***/ 
 #hero {
     position: relative;
-    padding: 30px 30px;
-    height: 100vh;
+    /*padding: 30px 30px;
+    height: 100lvh;
+    */
     background-image: url('../images/home-bg.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-}   
-#hero .container {
-    height: 100vh;
+    
+}
+#hero .hero-overlay img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center;
+    overflow: hidden;
+    z-index: -1;
+}
+/*
+.overlay{
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(244, 244, 244, 0.79);
+}
+*/
+
+#hero .container-fluid {
+    padding: 60px;
+}
+#hero .banner-space {
+    height: 200px;
 }
 #hero .banner-text p {
     text-shadow: 0 3rem 150px rgb(0, 0, 0);
 }
-
-#hero .btn-more .more-p {
+#hero .more-btn {
+    /*
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    left: 0;
+    bottom: 60px;
+    */
+}
+#hero .more-btn .btn {
+    padding: 0;
+}
+#hero .more-btn .more-p {
     position: relative;
-    top: -1.9em;
     transition: .3s ease-in-out;
 }
-#hero .btn-more .more-bg{
+#hero .more-btn .more-bg {
+    position: relative;
+    top: 40px;
     height: 3em;
     background: linear-gradient(-110deg, #e9ca31 0%, #e34c1d 26%, #741d7c 53%, #1f08b0 83%, #439AC5 100%);
     background-size: 130% 200%;
@@ -208,21 +247,23 @@ body {
     filter: blur(20px) brightness(1);
     transition: .3s ease-in-out;
 }
-#hero .btn-more img {
+#hero .more-btn .btn img {
     width: 25px;
+    /*
     position: relative;
     top: -2em;
+    */
     animation: bounce 0.8s infinite alternate;
     transition: .3s ease-in-out;
 }
-#hero .btn-more:hover .more-p {
+#hero .more-btn .btn:hover .more-p {
     text-shadow: 0 0 10px #fff;
 }
-#hero .btn-more:hover .more-bg {
+#hero .more-btn .btn:hover .more-bg {
     box-shadow: 0 0 20px #fff;
     filter: blur(20px) brightness(1.3);
 }
-#hero .btn-more:hover img {
+#hero .more-btn .btn:hover img {
     animation: bounce .2s infinite alternate;
     translate: 0 10px;
 }
@@ -244,6 +285,7 @@ section .sec-img {
     top: 15px;
     bottom: 15px;
     z-index: -1;
+    transition: all .3s ease-in-out;
 }
 section .sec-left {
     left: 0;
@@ -353,7 +395,12 @@ section .row {
 
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-
+    section .sec-left {
+        left: -20%;
+    }
+    section .sec-right {
+        right: -20%;
+    }
 }
 @media (min-width: 1200px) {
     .container, .container-fluid {
@@ -368,8 +415,11 @@ section .row {
         border-radius: 0;
         margin-top: 0;
     }
-    section .sec-img {
-        display: none;
+    section .sec-left {
+        left: -40%;
+    }
+    section .sec-right {
+        right: -40%;
     }
 }
 
