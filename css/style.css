@@ -406,9 +406,19 @@ section .sec-textblock {
     padding-top: 100px;
     padding-bottom: 30px;
 }
-#team .item {
-
+#team .card-deck {
+    padding: 30px 0;
 }
+#team .card-deck .card {
+    background: none;
+    border: none;
+    margin-bottom: 45px;
+}
+#team .card-deck .in-logo {
+    width: 40px;
+    height: 40px;
+}
+
 #team .des {
     background: val(--primary-color);
     text-align: left;
