@@ -181,7 +181,11 @@ body {
 
 }
 
-/*** hero ***/ 
+/*** MAIN ***/
+.main {
+    background-color: #fff;
+}
+/*** HERO ***/ 
 #hero {
     position: relative;
     /*padding: 30px 30px;
@@ -261,11 +265,11 @@ body {
 /*** SECTION ***/
 section {
     position: relative;
-
+    z-index: 10;
 }
 section .sec-img {
     position: absolute;
-    z-index: -1;
+    /*z-index: 10;*/
     transition: all .3s ease-in-out;
 }
 section .sec-left {
@@ -312,7 +316,7 @@ section .sec-textblock {
     left: 0;
     top: 0;
     border-radius: 250px;
-    z-index: -2;
+    z-index: -1;
     background: #ffffff;
     background: linear-gradient(0deg, rgba(255,255,255,0) 0%,
                                      rgba(255,255,255,1) 90%,
@@ -419,13 +423,6 @@ section .sec-textblock {
     height: 40px;
 }
 
-#team .des {
-    background: val(--primary-color);
-    text-align: left;
-    border-bottom-left-radius: 93%;
-    transition: .3s ease-in-out;
-}
-
 /*** SEZIONE CONTATTI ***/
 #contatti {
     padding-top: 200px;
@@ -448,17 +445,49 @@ section .sec-textblock {
     background-color: rgb(242, 242, 255); 
 }
 
-/*
-#team .item:hover .des {
-    height: 100%;
-    background: #f97307d;
-    position: absolute;
-    width: 89%;
-    padding: 5em;
-    top: 0;
-    border-bottom-left-radius: 0;
+/*** FOOTER ***/
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 700px;
+    z-index: -1;
 }
-*/
+.footer-cover {
+    position: relative;
+    background-color: #fff;
+    height: 1px;
+    margin-bottom: 700px;
+    box-shadow: 3px 2px 2px 0px rgba(51,51,51,0.5);
+}
+.footer-container {
+    position: relative;
+}
+footer .footer-bg {
+    position: absolute;
+    left: 0;
+    background-size: cover;
+}
+footer .footer-logo {
+    height: 100px;
+}
+footer .footer-img {
+    position: relative;
+    width: 70%;
+}
+footer .footer-link {
+    display: inline-block;
+    color: #fff;
+    padding: 30px 0;
+    z-index: 20;
+}
+footer .footer-link:hover {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+footer .footer-bottom {
+    
+}
 
 /*** ANIMAZINI ***/
 @keyframes bounce {
