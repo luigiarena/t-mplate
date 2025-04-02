@@ -261,6 +261,7 @@ body {
 /*** SECTION ***/
 section {
     position: relative;
+    overflow: hidden;
 }
 section .sec-img {
     position: absolute;
@@ -359,22 +360,22 @@ section .sec-textblock {
 
 #vantaggi .sec-mediablock-bg {
     position: absolute;
-    top: 0;
-    height: 100%;
-    width: 50%;
     background-color: #F2F5F6;
+    top: 0;
+    width: 225%;
+    height: 100%;
     z-index: -1;
 }
-/*
+
 #vantaggi .sec-mediablock-bg-left {
-    left: -25%;
+    left: -100%;
     border-radius: 0 100px 100px 0;
 }
 #vantaggi .sec-mediablock-bg-right {
-    right: -25%;
+    right: -100%;
     border-radius: 100px 0 0 100px;
 }
-*/
+
 #team {
     padding-top: 100px;
 }
@@ -478,7 +479,13 @@ section .sec-textblock {
 }
 @media (min-width: 1200px) {
     .container, .container-fluid {
-        max-width: 78%;
+        /*max-width: 78%;*/
+        padding-left: 210px;
+        padding-right: 210px;
+    }
+    .navbar {
+        margin-left: 200px !important;
+        margin-right: 200px !important;
     }
 }
 @media (max-width: 991px) {
