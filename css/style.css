@@ -503,6 +503,10 @@ section .sec-textblock {
 #contatti {
     padding-top: 260px;
     padding-bottom: 240px;
+    overflow-y: hidden;
+}
+#contatti .sec-left {
+    transform: rotate(180deg);
 }
 #contatti .sec-title {
     padding-bottom: 90px;
@@ -563,7 +567,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    min-height: 700px;
+    height: 700px;
     z-index: -1;
 }
 .footer-cover {
@@ -663,8 +667,12 @@ footer .footer-bottom {
         padding-right: 210px;
     }
     .navbar {
-        margin-left: 200px !important;
-        margin-right: 200px !important;
+        margin-left: 210px !important;
+        margin-right: 210px !important;
+    }
+    footer .container-fluid {
+        padding-left: 210px;
+        padding-right: 210px;
     }
 }
 @media (max-width: 991px) {
