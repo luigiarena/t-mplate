@@ -39,7 +39,7 @@ $(document).ready(function(){
         windowTop > 100 ? $('.logo-pos').removeClass('d-none') : $('.logo-pos').addClass('d-none');
 		windowTop > 100 ? $('ul').css('top','100px') : $('ul').css('top','160px');
         windowTop > 100 ? $('.nav-link').addClass('text-dark') : $('.nav-link').removeClass('text-dark');
-        windowTop > 100 ? $('.navbar-btn-contatti').addClass('btn-contatti') : $('.navbar-btn-contatti').removeClass('btn-contatti');
+        windowTop > 100 ? $('.navbar-btn').addClass('btn-special btn-animated') : $('.navbar-btn').removeClass('btn-special btn-animated');
 	});
 
 	// Carica dinamicamente il contenuto della finestra modal di Team
@@ -53,6 +53,7 @@ $(document).ready(function(){
 		$('#teamModal').find('.modal-img').attr('src', img_src);
    });
 
+   
 });
 
 /*
