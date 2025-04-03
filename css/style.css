@@ -205,6 +205,7 @@ body {
 /*** MAIN ***/
 .main {
     background-color: #fff;
+    overflow:hidden;
 }
 /*** HERO ***/ 
 #hero {
@@ -503,7 +504,6 @@ section .sec-textblock {
 #contatti {
     padding-top: 260px;
     padding-bottom: 240px;
-    overflow-y: hidden;
 }
 #contatti .sec-left {
     transform: rotate(180deg);
@@ -541,9 +541,7 @@ section .sec-textblock {
 #contatti .contatti-form {
     position: relative;
 }
-#contatti .input-placeholder .input-required {
-    color: #741D7C;
-}
+
 #contatti .contatti-form input::-moz-placeholder,
 #contatti .contatti-form input::-webkit-input-placeholder,
 #contatti .contatti-form input:-ms-input-placeholder {
@@ -562,6 +560,9 @@ section .sec-textblock {
 input:not(:placeholder-shown)+.input-placeholder {
     display: none;
 }
+#contatti .input-placeholder .input-required {
+    color: #741D7C;
+}
 
 
 /*** FOOTER ***/
@@ -571,6 +572,8 @@ footer {
     width: 100%;
     height: 700px;
     z-index: -1;
+    background-image: url(/images/footer-bg_@2x.jpg);
+    background-size: cover;
 }
 .footer-cover {
     position: relative;
@@ -579,8 +582,12 @@ footer {
     margin-bottom: 700px;
     box-shadow: 3px 2px 2px 0px rgba(51,51,51,0.5);
 }
-.footer-container {
+.footer-container .row-footer {
     position: relative;
+    min-height: 700px;
+    bottom:0;
+    padding-top: 0px;
+    padding-bottom: 60px;
 }
 footer .footer-bg {
     position: absolute;
@@ -588,21 +595,27 @@ footer .footer-bg {
     background-size: cover;
 }
 footer .footer-logo {
-    height: 100px;
+    padding-top: 20px;;
+    padding-bottom: 20px;
+    width: 70px;
 }
 footer .footer-img {
-    position: relative;
+    position: absolute;
+    top: -30%;
     width: 70%;
 }
 footer .footer-link {
-    display: inline-block;
+    display: block;
     color: #fff;
-    padding: 30px 0;
-    z-index: 20;
+    /*padding: 30px 0;
+    z-index: 20;*/
 }
 footer .footer-link:hover {
     text-decoration: none;
     color: var(--secondary-color);
+}
+footer .footer-contacts {
+    line-height: 2;
 }
 footer .footer-bottom {
     
