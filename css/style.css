@@ -60,6 +60,9 @@ p {
     /* riferimento 11px */
     font-size: 0.6875em;
 }
+.f-size-30 {
+    font-size: 1.875em;
+}
 
 strong {
     color: var(--tertiary-color);
@@ -418,17 +421,18 @@ section .sec-textblock {
     border: none;
     margin-bottom: 45px;
 }
-#team .card-deck .in-logo {
+#team .in-logo {
     width: 40px;
     height: 40px;
 }
 #team .card-deck .card-img-box {
     position: relative;
+    background-color: #000;
     cursor: pointer;
     overflow: hidden;
 }
 #team .card-deck .card-img-top {
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 #team .card-deck .card-bio {
     position: absolute;
@@ -439,17 +443,38 @@ section .sec-textblock {
 	border-right: 30px solid transparent;
 	height: 0px;
     line-height: 55px;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 #team .card-deck .card-img-box:hover .card-img-top {
     transform: scale(1.2);
-    transform-origin: 0% 0%;
+    transform-origin: 10% 10%;
     filter:grayscale(0.8);
 }
 #team .card-deck .card-img-box:hover .card-bio {
     color: var(--secondary-color);
     padding-left: 60px;
 }
+#teamModal .modal-dialog {
+
+}
+#teamModal .modal-header {
+    border: none;
+}
+#teamModal .modal-img {
+    padding-left: 2px;
+}
+#teamModal .modal-role {
+    padding-top: 20px;
+}
+#teamModal .modal-name {
+    padding-bottom: 40px;
+}
+#teamModal .in-logo {
+    width: 30px;
+    padding-top: 10px;
+}
+
+
 
 /*** SEZIONE CONTATTI ***/
 #contatti {
@@ -572,7 +597,7 @@ footer .footer-bottom {
     }
 }
 @media (min-width: 1200px) {
-    .container, .container-fluid {
+    section .container, section .container-fluid {
         /*max-width: 78%;*/
         padding-left: 210px;
         padding-right: 210px;

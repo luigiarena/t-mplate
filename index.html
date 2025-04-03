@@ -322,7 +322,7 @@
                         <div class="row justify-content-center">
                             <div class="card-container col-4">
                                 <div class="card">
-                                    <div class="card-img-box">
+                                    <div class="card-img-box" data-toggle="modal" data-target="#teamModal">
                                         <img class="card-img-top img-fluid" src="images/team/team_photo_1.png" alt="Card image cap">
                                         <div class="card-bio">
                                             <span class="dms-sans font-weight-bold f-size-7">SEE BIO</span>
@@ -330,7 +330,7 @@
                                     </div>
                                     <div class="card-body pl-0 text-left">
                                         <p class="card-title dm-sans f-size-5 font-weight-bold">KATHY T. MCKINNEY</p>
-                                        <p class="card-text dm-sans f-size-6">FOUNDER AND CEO</p>
+                                        <p class="card-role dm-sans f-size-6">FOUNDER AND CEO</p>
                                     </div>
                                     <div class="in-logo">
                                         <a class="text-left" href="#">
@@ -341,14 +341,15 @@
                             </div>
                             <div class="card-container col-4">
                                 <div class="card">
-                                    <div class="card-img-box">
+                                    <div class="card-img-box" data-toggle="modal" data-target="#teamModal">
                                         <img class="card-img-top img-fluid" src="images/team/team_photo_2.png" alt="Card image cap">
                                         <div class="card-bio">
                                             <span class="dms-sans font-weight-bold f-size-7">SEE BIO</span>
                                         </div>
-                                    </div>                                    <div class="card-body pl-0 text-left">
+                                    </div>                                    
+                                    <div class="card-body pl-0 text-left">
                                         <p class="card-title dm-sans f-size-5 font-weight-bold">LORI A. RAMIREZ</p>
-                                        <p class="card-text dm-sans f-size-6">DIRECTOR</p>
+                                        <p class="card-role dm-sans f-size-6">DIRECTOR</p>
                                     </div>                                
                                     <div class="in-logo">
                                         <a class="text-left" href="#">
@@ -359,14 +360,15 @@
                             </div>
                             <div class="card-container col-4">
                                 <div class="card">
-                                    <div class="card-img-box">
+                                    <div class="card-img-box" data-toggle="modal" data-target="#teamModal">
                                         <img class="card-img-top img-fluid" src="images/team/team_photo_3.png" alt="Card image cap">
                                         <div class="card-bio">
                                             <span class="dms-sans font-weight-bold f-size-7">SEE BIO</span>
                                         </div>
-                                    </div>                                    <div class="card-body pl-0 text-left">
+                                    </div>                                    
+                                    <div class="card-body pl-0 text-left">
                                         <p class="card-title dm-sans f-size-5 font-weight-bold">PAUL TWIGGS</p>
-                                        <p class="card-text dm-sans f-size-6">DIRECTOR</p>
+                                        <p class="card-role dm-sans f-size-6">DIRECTOR</p>
                                     </div>
                                     <div class="in-logo">
                                         <a class="text-left" href="#">
@@ -377,28 +379,76 @@
                             </div>
                             <div class="card-container col-4">
                                 <div class="card">
-                                    <div class="card-img-box">
+                                    <div class="card-img-box" data-toggle="modal" data-target="#teamModal">
                                         <img class="card-img-top img-fluid" src="images/team/team_photo_4.png" alt="Card image cap">
                                         <div class="card-bio">
                                             <span class="dms-sans font-weight-bold f-size-7">SEE BIO</span>
                                         </div>
-                                    </div>                                    <div class="card-body pl-0 text-left">
+                                    </div>                                    
+                                    <div class="card-body pl-0 text-left">
                                         <p class="card-title dm-sans f-size-5 font-weight-bold">ANTHONY S. FRENCH</p>
-                                        <p class="card-text dm-sans f-size-6">DIRECTOR</p>                                
+                                        <p class="card-role dm-sans f-size-6">DIRECTOR</p>                                
                                     </div>
                                     <div class="in-logo">
-                                        <a class="text-left" href="#">
+                                        <a class="text-left" href="#" data-target="teamModal">
                                             <img src="images/icons/SVG/in-logo.svg">
                                         </a>
-                                    </div>  
-                                </div>                      
+                                    </div>
+                                </div>           
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </section>
 
+        <!-- Team Modal -->
+        <div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-container pb-5 container-fluid">
+                            <div class="row justify-content-center">
+                                <div class="col-sm-12 col-md-4">
+                                    <img class="modal-img img-fluid" src="" alt="Card image cap">
+                                </div>
+                                <div class="col-sm-12 col-md-6 align-content-around">
+                                    <p class="modal-name dm-sans f-size-30 font-weight-bold">Name</p>
+                                    <p class="modal-description dm-sans">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+                                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
+                                        magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
+                                        quis nostrud exerci tation ullamcorper suscipit lobortis 
+                                        nisl ut aliquip ex ea commodo consequat. Duis autem vel 
+                                        eum iriure dolor in hendrerit in vulputate velit esse 
+                                        molestie consequat, vel illum dolore eu feugiat nulla 
+                                        facilisis at vero eros et accumsan et iusto odio dignissim 
+                                        qui blandit praesent luptatum zzril delenit augue duis dolore 
+                                        te feugait nulla facilisi.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-sm-12 col-md-10">
+                                    <p class="modal-role dm-sans">Role</p>                                
+                                    <div class="in-logo">
+                                        <a class="text-left" href="#" data-target="teamModal">
+                                            <img src="images/icons/SVG/in-logo.svg">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    
         <!-- Section Contatti -->
         <section id="contatti" class="text-center">
             <div class="container">
@@ -469,7 +519,7 @@
             </div>
         </div>
     </footer>
-
+  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <!-- script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script-->

@@ -33,6 +33,17 @@ $(document).ready(function(){
         windowTop > 100 ? $('.navbar-btn-contatti').addClass('btn-contatti') : $('.navbar-btn-contatti').removeClass('btn-contatti');
 	});
 
+	// Carica dinamicamente il contenuto della finestra modal di Team
+	$(".card-img-box").on("click", function () {
+		var img_src = $(this).find('.card-img-top').attr("src");
+		var name = $(this).parent('.card').find('.card-title').text();
+		var role = $(this).parent('.card').find('.card-role').text();
+
+		$('#teamModal').find('.modal-name').text(name);
+		$('#teamModal').find('.modal-role').text(role);
+		$('#teamModal').find('.modal-img').attr('src', img_src);
+   });
+
 });
 
 /*
