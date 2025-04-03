@@ -524,6 +524,8 @@ section .sec-textblock {
     border-radius: 0;
     border-bottom: 1px solid #BDCCD4;
     transition: .3s ease-in-out;
+
+    font-size: 24px;
 }
 #contatti .btn-secondary {
     color: #fff;
