@@ -5,6 +5,17 @@
     --tertiary-color: #100458;
 }
 
+/*** PALETTE ***/
+.color-1 {
+
+}
+.color-2 {
+
+}
+.color-3 {
+
+}
+
 /*** TYPOGRAPHY ***/
 .anton {
     /* Font per heading */
@@ -479,25 +490,62 @@ section .sec-textblock {
 
 /*** SEZIONE CONTATTI ***/
 #contatti {
-    padding-top: 200px;
+    padding-top: 260px;
+    padding-bottom: 240px;
 }
-#contatti .right {
-    max-width: 600px;
+#contatti .sec-title {
+    padding-bottom: 90px;
 }
-#contatti .right .form-control {
+#contatti .contatti-description {
+    padding: 30px 0;
+}
+#contatti .form-group.contatti-form {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+#contatti .form-control {
     background-color: none;
     border: none;
     border-radius: 0;
     border-bottom: 1px solid #BDCCD4;
     transition: .3s ease-in-out;
 }
-#contatti .right .btn-secondary {
+#contatti .btn-secondary {
     color: #fff;
     border-radius: 50px;
 }
-#contatti .right .form-control:focus {
+#contatti .form-control:focus {
     background-color: rgb(242, 242, 255); 
 }
+#contatti .row-send {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+#contatti .contatti-form {
+    position: relative;
+}
+#contatti .input-placeholder .input-required {
+    color: #741D7C;
+}
+#contatti .contatti-form input::-moz-placeholder,
+#contatti .contatti-form input::-webkit-input-placeholder,
+#contatti .contatti-form input:-ms-input-placeholder {
+    color: transparent !important;
+}
+#contatti .contatti-form input::placeholder {
+    color: transparent !important;
+}
+#contatti .input-placeholder {
+    pointer-events: none;
+    position: absolute;
+    left: 20px;
+    top: calc(35% + 1px);
+    transform: translateY(-50%);
+}
+input:not(:placeholder-shown)+.input-placeholder {
+    display: none;
+}
+
 
 /*** FOOTER ***/
 footer {

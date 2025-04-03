@@ -1,4 +1,13 @@
 $(document).ready(function(){
+	
+	/*
+	// Aggiunge un asterisco per ogni form control con classe required
+	$('.form-control.required').each(function() {
+		var temp = $(this).attr('placeholder');
+		$(this).attr('placeholder', temp+' * ');
+	});
+	*/
+
     // Aggiunge lo smooth scrollink a tutti i link che contengono un hash
     $("a").on('click', function(event) {
   
@@ -34,7 +43,7 @@ $(document).ready(function(){
 	});
 
 	// Carica dinamicamente il contenuto della finestra modal di Team
-	$(".card-img-box").on("click", function () {
+	$('.card-img-box').on('click', function () {
 		var img_src = $(this).find('.card-img-top').attr("src");
 		var name = $(this).parent('.card').find('.card-title').text();
 		var role = $(this).parent('.card').find('.card-role').text();
