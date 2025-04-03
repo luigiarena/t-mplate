@@ -454,8 +454,9 @@ section .sec-textblock {
     color: var(--secondary-color);
     padding-left: 60px;
 }
-#teamModal .modal-dialog {
-
+#teamModal .modal-dialog .modal-content {
+    border: none;
+    border-radius: 5px;
 }
 #teamModal .modal-header {
     border: none;
