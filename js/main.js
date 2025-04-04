@@ -8,6 +8,15 @@ $(document).ready(function(){
 	});
 	*/
 
+	// Al ricaricamento della pagina controlla se la pagina è stata scrollata
+	// e attiva la classe sticky se necessario
+	if (($(window).scrollTop() > 100) && (!$('nav').hasClass('navbar-sticky')) ) {
+		$('nav').addClass('navbar-sticky');
+		$('.logo-neg').addClass('d-none');
+		$('.logo-pos').removeClass('d-none');
+		$('.navbar-btn').addClass('btn-special btn-animated');
+	};
+
     // Aggiunge lo smooth scrollink a tutti i link che contengono un hash
     $("a").on('click', function(event) {
   
@@ -30,6 +39,22 @@ $(document).ready(function(){
         });
       } // End if
     });
+
+	// Toggle Menu a comparsa nella sezione hero
+	$('.navbar-toggler').on('click', () => {
+		var windowTop = $(window).scrollTop();
+		if (windowTop < 100) {
+			if ($('.navbar-toggler').hasClass('collapsed')) {
+				$('nav').addClass('navbar-sticky');
+				$('.logo-neg').addClass('d-none');
+				$('.logo-pos').removeClass('d-none');
+			} else {
+				$('nav').removeClass('navbar-sticky');
+				$('.logo-pos').addClass('d-none');
+				$('.logo-neg').removeClass('d-none');
+			}
+		}
+	});
 
     // Trasforma la navbar in sticky al superamento di 100px
 	$(window).scroll( () => {
@@ -57,40 +82,26 @@ $(document).ready(function(){
 });
 
 /*
-$( () => {
-	
-	//On Scroll Functionality
-	$(window).scroll( () => {
-		var windowTop = $(window).scrollTop();
-		windowTop > 100 ? $('navbar').addClass('navShadow') : $('navbar').removeClass('navShadow');
-		windowTop > 100 ? $('ul').css('top','100px') : $('ul').css('top','160px');
-	});
-	
-	//Click Logo To Scroll To Top
-	$('#logo').on('click', () => {
-		$('html,body').animate({
-			scrollTop: 0
-		},500);
-	});
-	
-	//Smooth Scrolling Using Navigation Menu
-	$('a[href*="#"]').on('click', function(e){
-		$('html,body').animate({
-			scrollTop: $($(this).attr('href')).offset().top - 100
-		},500);
-		e.preventDefault();
-	});
-	
-	//Toggle Menu
-	$('#menu-toggle').on('click', () => {
-		$('#menu-toggle').toggleClass('closeMenu');
-		$('ul').toggleClass('showMenu');
-		
-		$('li').on('click', () => {
-			$('ul').removeClass('showMenu');
-			$('#menu-toggle').removeClass('closeMenu');
-		});
-	});
-	
-});
+
+// Ridimensiona altezza footer per renderlo più responsivo
+document.addEventListener("DOMContentLoaded", function() {
+  const placeholder = document.querySelector('.placeholder')
+  const footer = document.querySelector('footer')
+
+  // On DOMContentLoaded, set placeholder height to be equal to footer height
+  updateHeight()
+
+  window.addEventListener('resize', onResize)
+
+  // On window resize, update placeholder height to be equal to footer height
+  function onResize() {
+    updateHeight()
+  }
+
+  function updateHeight() {
+    // Placeholder should always match footer height
+    placeholder.style.height = `${footer.offsetHeight}px`
+  }
+})
+
 */
